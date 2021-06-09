@@ -1,0 +1,35 @@
+.cover {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.cover:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    rgba(26, 40, 120, 0.7),
+    rgba(10, 143, 196, 0.7)
+  );
+}
+
+.cover .wrap {
+  position: relative;
+  z-index: 1;
+  padding: 100px 16px;
+  max-width: 1024px;
+}

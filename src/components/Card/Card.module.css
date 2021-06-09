@@ -1,0 +1,87 @@
+.root {
+  align-items: center;
+  justify-content: space-around;
+  display: inline-flex;
+  padding: 20px 15px;
+}
+
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  width: 190px;
+  margin-right: 20px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  perspective: 1000px;
+  background-color: white;
+}
+
+.cardInner {
+  padding: 10px;
+  text-align: center;
+  background-color: transparent;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.cardBack {
+  display: none;
+}
+
+/* переворот при КЛИКЕ */
+.done .cardInner {
+  background-color: rgba(10, 143, 196, 0.7);
+  transform: rotateY(180deg);
+}
+
+.done .cardInner .cardFront {
+  display: none;
+}
+
+.done .cardInner .cardBack {
+  display: block;
+  color: aliceblue;
+  transform: rotateY(180deg);
+}
+
+.icons {
+  font-size: 26px;
+  cursor: pointer;
+  margin-right: 10px;
+  border: 1px solid transparent;
+  outline: 0;
+}
+
+.icons:hover {
+  color: green;
+}
+
+.isRememberedIcon {
+  color: green;
+}
+
+.iconDel:hover {
+  color: red;
+}
+
+.isRemembered .cardFront,
+.isRemembered .cardBack {
+  text-decoration: line-through;
+}
+
+/* при НАВЕДЕНИИ */
+
+/* .card:hover .cardInner {
+  background-color: green;
+  transform: rotateY(180deg);
+}
+
+.card:hover .cardFront {
+  display: none;
+}
+
+.card:hover .cardBack {
+  display: block;
+  color: aliceblue;
+} */
